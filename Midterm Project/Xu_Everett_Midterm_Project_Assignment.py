@@ -33,11 +33,9 @@ if __name__ == "__main__":
 	print("Computer Science")
 
 	while True:
-		
 		#Get user input number
 		print("This Python program display Roman Numerals and Predict Population. Enter option 1 to display Roman Numerals. Enter option 2 to Predict Population. Enter 9 to Exit the program.")
 		user_input = int(input("Enter option:"))
-	
 		#Determine which option is chosen
 		if user_input == 1:
 			#If 1 is chosen, print the roman numebr given by roman_numerals()
@@ -47,7 +45,6 @@ if __name__ == "__main__":
 				print("Invalid input")
 				continue
 			print(f"The roman number is: {roman_numerals(number)}")
-			
 		# If 2 is chosen 
 		elif user_input == 2:
 			#Take input for initial population, daily increase, and days
