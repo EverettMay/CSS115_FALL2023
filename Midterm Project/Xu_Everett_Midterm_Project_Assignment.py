@@ -1,10 +1,9 @@
-2#The function that convert number to roman number
+#The function that convert number to roman number
 def roman_numerals(number):
 	#List the set of roman numbers
 	roman_numbers = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
 	#Use the input - 1 to find the right number
 	return roman_numbers[number-1]
-
 
 #The function for calculating popolation 
 def calc_population(starting_number, daily_increase, days):
