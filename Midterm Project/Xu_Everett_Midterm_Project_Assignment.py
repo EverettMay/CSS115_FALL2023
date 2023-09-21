@@ -1,4 +1,4 @@
-#The function that convert number to roman number
+2#The function that convert number to roman number
 def roman_numerals(number):
 	#List the set of roman numbers
 	roman_numbers = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
@@ -22,7 +22,7 @@ def calc_population(starting_number, daily_increase, days):
 def print_dict_to_table(user_dict):
 	print("{:<10} {:<10}".format('Days', 'Population'))
 	for key, value in user_dict.items():
-		print("{:<10} {:<10}".format(key, value))
+		print("{:<10} {:<10.2f}".format(key, value))
 	
 if __name__ == "__main__":
 	
