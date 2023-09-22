@@ -11,8 +11,21 @@ if __name__ == "__main__":
 	while user_input != 9:
 		
 		#Get user input number
-		print("This Python program display Roman Numerals and Predict Population. Enter option 1 to display Roman Numerals. Enter option 2 to Predict Population. Enter 9 to Exit the program.")
-		user_input = int(input("Enter option:"))
+		isNumber = False
+		
+		while isNumber == False:
+			
+			print("This Python program display Roman Numerals and Predict Population. Enter option 1 to display Roman Numerals. Enter option 2 to Predict Population. Enter 9 to Exit the program.")
+			
+			#Check for non-number input
+			try: 
+				user_input = int(input("Enter option:"))
+				
+			except ValueError:
+				print("Please enter a number!!!!!!")
+				
+			else:
+				isNumber = True
 		
 		#Determine which option is chosen
 		if user_input == 1:
