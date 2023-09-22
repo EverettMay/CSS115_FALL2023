@@ -23,20 +23,31 @@ if __name__ == "__main__":
 				number = int(input("Reenter the number you want to convert(1-10):"))
 			
 			#Create a list of roman numbers 
-			roman_numbers = ['Hi','I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
+			roman_numbers = ['None','I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
 			print(f"The roman number is: {roman_numbers[number]}")
 			
 		# If 2 is chosen 
 		elif user_input == 2:
-			#Take input for initial population, daily increase, and days
+			
+			#Take input for initial population
 			starting_number = int(input("Enter starting number of organism:"))
+			
+			#Check invalid input
+			while (starting_number < 0):
+				starting_number = int(input("Reenter starting number of organism:"))
+	
+			#Take input for daily increase
 			daily_increase = int(input("Enter daily increase value(1-100):"))
+			
+			#Check invalid input
+			while (daily_increase > 100 or daily_increase <1):
+				daily_increase = int(input("Reenter daily increase value(1-100):"))
+				
+			#Take input for days
 			days = int(input("Enter number of days(2-30):"))
 			
 			#Check invalid input
-			while (starting_number < 0 or daily_increase > 100 or daily_increase <1 or days < 2 or days > 30):
-				starting_number = int(input("Reenter starting number of organism:"))
-				daily_increase = int(input("Reenter daily increase value(1-100):"))
+			while days < 2 or days > 30):
 				days = int(input("Reenter number of days(2-30):"))
 				
 			#Create a dictinary for population
