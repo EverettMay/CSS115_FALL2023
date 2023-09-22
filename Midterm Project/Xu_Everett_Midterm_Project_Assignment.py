@@ -9,12 +9,14 @@ if __name__ == "__main__":
 	user_input = 0
 
 	while user_input != 9:
+		
 		#Get user input number
 		print("This Python program display Roman Numerals and Predict Population. Enter option 1 to display Roman Numerals. Enter option 2 to Predict Population. Enter 9 to Exit the program.")
 		user_input = int(input("Enter option:"))
 		
 		#Determine which option is chosen
 		if user_input == 1:
+			
 			#If 1 is chosen, print the roman numebr given by roman_numerals()
 			number = int(input("Enter the number you want to convert(1-10):"))
 			
@@ -47,7 +49,7 @@ if __name__ == "__main__":
 			days = int(input("Enter number of days(2-30):"))
 			
 			#Check invalid input
-			while days < 2 or days > 30):
+			while (days < 2 or days > 30):
 				days = int(input("Reenter number of days(2-30):"))
 				
 			#Create a dictinary for population
@@ -58,17 +60,19 @@ if __name__ == "__main__":
 			#Calculate population with initial population times daily increase to the power of days - 1
 				population[i] = starting_number * (1 + daily_increase / 100) ** (i - 1)
 
-			#Print the population in a table
+			#Print the population in a table for readability
 			print("{:<10} {:<10}".format('Days', 'Population'))
 			for key, value in population.items():
 				print("{:<10} {:<10.2f}".format(key, value))
 	
 		#End loop if 9 is chosen
 		elif user_input == 9:
+			
 			print("Exit porgram")
 			continue
 
 		#Check invalid input
 		else:
+			
 			print("Invalid option")
 
