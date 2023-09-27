@@ -5,3 +5,9 @@ while(counter <= 10):
 	counter += 1
 	
 print(sum)
+
+
+examScore = float(input("Enter exam score:"))
+
+while (examScore>100 or examScore<0):
+	examScore = float(input("Re-enter exam score:"))

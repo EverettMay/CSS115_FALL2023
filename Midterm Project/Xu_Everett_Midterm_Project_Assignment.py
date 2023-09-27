@@ -8,7 +8,7 @@ if __name__ == "__main__":
 	
 	user_input = ' '
 
-	while user_input != 9:
+	while user_input != '9':
 		
 		#Get user input number	
 		print("This Python program display Roman Numerals and Predict Population. Enter option 1 to display Roman Numerals. Enter option 2 to Predict Population. Enter 9 to Exit the program.")
@@ -17,12 +17,10 @@ if __name__ == "__main__":
 		
 		#Check for invalid input
 		while (not user_input.isdigit() or user_input != '1' and user_input != '2' and user_input != '9'):
-			user_input = input("Re-Enter the option")
-			
-		user_input = int(user_input)
+			user_input = input("Re-enter the option:")
 		
 		#Determine which option is chosen
-		if user_input == 1:
+		if user_input == '1':
 			
 			#If 1 is chosen, print the roman numebr given by roman_numerals()
 			number = int(input("Enter the number you want to convert(1-10):"))
@@ -36,28 +34,28 @@ if __name__ == "__main__":
 			print(f"The roman number is: {roman_numbers[number]}")
 			
 		# If 2 is chosen 
-		elif user_input == 2:
+		elif user_input == '2':
 			
 			#Take input for initial population
 			starting_number = int(input("Enter starting number of organism:"))
 			
 			#Check invalid input
 			while (starting_number < 0):
-				starting_number = int(input("Reenter starting number of organism:"))
+				starting_number = int(input("Re-enter starting number of organism:"))
 	
 			#Take input for daily increase
 			daily_increase = int(input("Enter daily increase value(1-100):"))
 			
 			#Check invalid input
 			while (daily_increase > 100 or daily_increase <1):
-				daily_increase = int(input("Reenter daily increase value(1-100):"))
+				daily_increase = int(input("Re-enter daily increase value(1-100):"))
 				
 			#Take input for days
 			days = int(input("Enter number of days(2-30):"))
 			
 			#Check invalid input
 			while (days < 2 or days > 30):
-				days = int(input("Reenter number of days(2-30):"))
+				days = int(input("Re-enter number of days(2-30):"))
 				
 			#Create a dictinary for population
 			population = dict()
@@ -73,7 +71,7 @@ if __name__ == "__main__":
 				print("{:<10} {:<10.2f}".format(key, value))
 	
 		#End loop if 9 is chosen
-		elif user_input == 9:
+		elif user_input == '9':
 			
 			print("Exit porgram")
 			continue
