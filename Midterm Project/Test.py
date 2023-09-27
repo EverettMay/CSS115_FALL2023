@@ -1,2 +1,0 @@
-name = ' '
-print(name.isdigit())
