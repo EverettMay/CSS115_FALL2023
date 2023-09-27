@@ -10,15 +10,17 @@ if __name__ == "__main__":
 
 	while user_input != 9:
 		
-		#Get user input number
-		#Check for non-number input
-		while user_input.isdigit() == False:
+		#Get user input number	
+		print("This Python program display Roman Numerals and Predict Population. Enter option 1 to display Roman Numerals. Enter option 2 to Predict Population. Enter 9 to Exit the program.")
 			
-			print("This Python program display Roman Numerals and Predict Population. Enter option 1 to display Roman Numerals. Enter option 2 to Predict Population. Enter 9 to Exit the program.")
-			
-			user_input = input("Enter option:")
+		user_input = input("Enter option:")
 		
+		#Check for invalid input
+		while (not user_input.isdigit() or user_input != '1' and user_input != '2' and user_input != '9'):
+			user_input = input("Re-Enter the option")
+			
 		user_input = int(user_input)
+		
 		#Determine which option is chosen
 		if user_input == 1:
 			
@@ -76,8 +78,4 @@ if __name__ == "__main__":
 			print("Exit porgram")
 			continue
 
-		#Check invalid input
-		else:
-			
-			print("Invalid option")
 
