@@ -78,6 +78,7 @@ if __name__ == "__main__":
 			plt.xlabel("Days")
 			plt.ylabel("Population")
 			plt.show()
+			
 		#End loop if 9 is chosen
 		elif user_input == '9':
 			
