@@ -15,8 +15,7 @@ if __name__ == "__main__":
 	while (not user_input.isdigit() or user_input != '1' and user_input != '2' and user_input != '9'):
 		user_input = input("Re-enter the option:")
 
-	if user_input == '9':
-		print("Exit program")
+	
 	
 	while user_input != '9':
 		
@@ -35,7 +34,7 @@ if __name__ == "__main__":
 			print(f"The roman number is: {roman_numbers[number]}")
 			
 		# If 2 is chosen 
-		elif user_input == '2':
+		else:
 			
 			#Take input for initial population
 			starting_number = int(input("Enter starting number of organism:"))
@@ -71,12 +70,6 @@ if __name__ == "__main__":
 			for key, value in population.items():
 				print("{:<10} {:<10.2f}".format(key, value))
 	
-		#End loop if 9 is chosen
-		elif user_input == '9':
-			
-			print("Exit program")
-			continue
-
 		#Get user input number	
 		print("This Python program display Roman Numerals and Predict Population. Enter option 1 to display Roman Numerals. Enter option 2 to Predict Population. Enter 9 to Exit the program.")
 			
@@ -85,5 +78,7 @@ if __name__ == "__main__":
 		#Check for invalid input
 		while (not user_input.isdigit() or user_input != '1' and user_input != '2' and user_input != '9'):
 			user_input = input("Re-enter the option:")
-
+			
+	if user_input == '9':
+		print("Exit program")
 
