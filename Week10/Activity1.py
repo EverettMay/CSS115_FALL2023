@@ -46,9 +46,9 @@ def get_average_and_letter_grade(scores):
 
 def getExamScores():
     scores = []
-    number_of_scores = int(input("How many exam scores do you want to enter? "))
+    number_of_scores = int(input("How many exam scores do you want to enter: "))
     while number_of_scores < 1 or number_of_scores > 5:
-        number_of_scores = int(input("Re-enter how many exam scores do you want to enter? "))
+        number_of_scores = int(input("Re-enter how many exam scores do you want to enter: "))
     for i in range(number_of_scores):
         score = int(input(f"Please enter the score for exam {i + 1}: "))
         while not is_valid(score):
@@ -60,7 +60,7 @@ def show_Student_Info_and_Grades(name, major, gpa, contact_email, scores, averag
     print("Student Information")
     print(f"Name: {name}")
     print(f"Major: {major}")
-    print(f"GPA: {gpa:.2f}")
+    print(f"GPA: {gpa}")
     print(f"Contact Email: {contact_email}")
     print("Exam Scores")
     for i in range(len(scores)):
