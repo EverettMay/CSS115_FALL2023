@@ -21,8 +21,6 @@ def showDate():
               "October", "November", "December"]
     print(months[int(date[0]) - 1], date[1] + ",", date[2])
 
-
-
 def main():
     showInitials()
     showSum()
